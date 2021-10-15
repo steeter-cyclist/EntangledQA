@@ -49,7 +49,13 @@ def load_dataset_file(filename):
     return df
 
 def load_predictions(filename):
-    return pd.read_csv(filename, header=None, names=['prediction'], dtype={'prediction':bool})
+    df = pd.read_csv(filename, header=None, names=['prediction'])
+    if df.prediction.dtype == int:
+        df.prediction = df.prediction.astype(bool)
+        df.prediction = ~df.prediction
+    else:
+        df.prediction = df.prediction.astype(bool)
+    return df
 
 def main():
     parser = argparse.ArgumentParser(description="Evaluate prediction accuracy for entangled datasets")
