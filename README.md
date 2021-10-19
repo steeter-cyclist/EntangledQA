@@ -39,3 +39,6 @@ python3 evaluate_entangled.py \
 --map=entangledqa_dev_map.csv
 ```
 
+## MCS Submissions
+MCS participants should email submissions to dfelder@cyc.com. The final submission deadline is November 17th, 2021. You may submit up to 2 models at a time, but you may not submit more than once a week in the weeks leading up to the deadline. You may submit 2 models as part of your final submission. 
+
