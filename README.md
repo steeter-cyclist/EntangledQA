@@ -1,10 +1,10 @@
 # Expanded EntangledQA: Common Sense Entangled Questions
 
 ## The dataset
-
 This repository contains the Expanded EntangledQA dataset. EntangledQA is a common sense knowledge and reasoning generalization task consisting of 5,000 true/false questions divided across two test sets - the A set and the B set. For every question q in the A set there is an “entangled” question q1 in the B set such that if one knows the answer to q, and one has common sense, one should also know the answer to q1. This entanglement relation is not symmetrical. While there may be many cases in which someone who knows the answer to q1 in the B set should also know the answer to question q in the A set, this will not necessarily be the case. It is also important to note that the entanglement relation is not the same as logical entailment: answers to questions in the A set do not in general logically imply answers to their entangled questions in the B set nor vice versa. Instead, the entanglement relation is one of likely underlying causal understanding; e.g., knowing that ripe apples fall from trees is entangled with knowing that ripe peaches fall from trees, and is entangled with knowing that fruit grows on trees, and so on. Also included here is a 75 question training set and two 425-question dev sets. The training set was the training set for CycIC3. The dev sets are subsets of the test sets for CycIC3.
 
-If you are an MCS participant who wishes to submit results for evaluation on the test sets, please send in 2 prediction files - one for each test set. The predictions should be in .lst format, containing one answer per line, in the same order as the corresponding questions.
+## MCS Submissions
+If you are an MCS participant who wishes to submit results for evaluation on the test sets, please send in 2 prediction files - one for each test set. The predictions should be in .lst format, containing one answer per line, in the same order as the corresponding questions. MCS participants should email submissions to dfelder@cyc.com. The final submission deadline is November 1st, 2021. You may submit up to 2 models at a time, but you may not submit more than once a week in the weeks leading up to the deadline. You may submit 2 models as part of your final submission. 
 
 ## Run the evaluation script
 `evaluate_entangled.py` takes predictions for the A question set and the B question set and outputs five accuracy metrics:
