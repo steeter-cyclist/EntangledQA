@@ -49,7 +49,7 @@ def load_dataset_file(filename):
     return df
 
 def load_predictions(filename):
-    df = pd.read_csv(filename, header=None, names=['prediction'])
+    df = pd.read_csv(filename, names=['prediction'])
     if df.prediction.dtype == int:
         df.prediction = df.prediction.astype(bool)
         df.prediction = ~df.prediction
